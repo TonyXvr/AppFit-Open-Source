@@ -1,0 +1,556 @@
+# AppFit - Comprehensive .gitignore
+
+# ===================================
+# Dependencies & Package Managers
+# ===================================
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# pnpm
+.pnpm-debug.log*
+.pnpm-store/
+.pnpm/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Package manager lock files (keep only pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# ===================================
+# Environment & Configuration
+# ===================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Wrangler environment
+.dev.vars
+wrangler.toml.local
+
+# Supabase
+.supabase/
+
+# ===================================
+# Build Outputs & Distribution
+# ===================================
+
+# Build directories
+build/
+dist/
+out/
+.output/
+.vercel/
+.netlify/
+
+# Remix build
+/build
+/public/build
+
+# Vite build
+dist-ssr/
+*.local
+
+# Cloudflare Workers
+worker-configuration.d.ts.backup
+
+# Electron build outputs
+/app-builds/
+/release/
+/packages/
+
+# ===================================
+# Development & IDE Files
+# ===================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# WebStorm/IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===================================
+# Operating System Files
+# ===================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# Logs & Debugging
+# ===================================
+
+# Application logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+
+# Debugging
+.vscode-test/
+.vscode-test-web/
+
+# ===================================
+# Cache & Temporary Files
+# ===================================
+
+# Cache directories
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# ===================================
+# Testing & Quality Assurance
+# ===================================
+
+# Test coverage
+coverage/
+.coverage/
+*.lcov
+.nyc_output/
+
+# Jest
+jest.config.js.backup
+
+# Vitest
+.vitest/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ===================================
+# Database & Storage
+# ===================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Database dumps
+*.sql
+*.dump
+
+# ===================================
+# AI/ML & Data
+# ===================================
+
+# Model files
+*.model
+*.pkl
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Training data
+data/
+datasets/
+*.csv
+*.json.gz
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# ===================================
+# Docker & Containers
+# ===================================
+
+# Docker
+.dockerignore.backup
+docker-compose.override.yml
+
+# ===================================
+# Version Control
+# ===================================
+
+# Git
+*.orig
+*.rej
+*.patch
+.git/
+.gitattributes.backup
+
+# Mercurial
+.hg/
+.hgignore
+.hgsigs
+.hgsubstate
+.hgtags
+
+# ===================================
+# Electron Specific
+# ===================================
+
+# Electron build artifacts
+/dist_electron/
+/release/
+/app-builds/
+/packages/
+
+# Electron Forge
+.webpack/
+
+# Electron Builder
+/dist/
+/build/
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.AppImage
+*.snap
+*.exe
+*.msi
+*.nsis
+*.zip
+*.tar.gz
+
+# Code signing
+*.p12
+*.mobileprovision
+
+# ===================================
+# Cloudflare & Serverless
+# ===================================
+
+# Wrangler
+.wrangler/
+wrangler.toml.backup
+
+# Serverless Framework
+.serverless/
+
+# ===================================
+# TypeScript & Build Tools
+# ===================================
+
+# TypeScript cache
+*.tsbuildinfo
+
+# UnoCSS
+.uno.css
+
+# PostCSS
+.postcssrc.js.backup
+
+# ===================================
+# Security & Certificates
+# ===================================
+
+# Security files
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.keystore
+
+# API Keys and secrets (additional patterns)
+*secret*
+*private*
+*credentials*
+
+# ===================================
+# Backup & Archive Files
+# ===================================
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+*.save
+
+# Archive files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bz2
+*.xz
+
+# ===================================
+# Project Specific
+# ===================================
+
+# AppFit specific ignores
+/final_report.pdf.backup
+/changelog.md.backup
+
+# AI model outputs
+generated/
+outputs/
+models/
+
+# User uploads and data
+uploads/
+user-files/
+user-data/
+
+# Analytics and metrics
+analytics/
+metrics/
+
+# Documentation builds
+docs/build/
+docs/dist/
+
+# Custom application directories
+backups/
+exports/
+imports/
+
+# ===================================
+# Runtime & Process Files
+# ===================================
+
+# Process IDs
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output (if used)
+.next
+out
+
+# Nuxt.js build / generate output (if used)
+.nuxt
+
+# Gatsby files (if used)
+.cache/
+public
+
+# Storybook build outputs (if used)
+.out
+.storybook-out
+
+# ===================================
+# Miscellaneous
+# ===================================
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary files
+*.tmp
+*.temp
+
+# Lock files for other package managers
+composer.lock
+Gemfile.lock
+Pipfile.lock
+
+# OS generated files
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDE specific files
+*.iml
+*.ipr
+*.iws
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity

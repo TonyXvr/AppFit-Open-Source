@@ -1,0 +1,109 @@
+.rayContainer {
+  // Theme-specific colors
+  --ray-color-primary: color-mix(in srgb, var(--primary-color), transparent 30%);
+  --ray-color-secondary: color-mix(in srgb, var(--secondary-color), transparent 30%);
+  --ray-color-accent: color-mix(in srgb, var(--accent-color), transparent 30%);
+
+  // Theme-specific gradients
+  --ray-gradient-primary: radial-gradient(var(--ray-color-primary) 0%, transparent 70%);
+  --ray-gradient-secondary: radial-gradient(var(--ray-color-secondary) 0%, transparent 70%);
+  --ray-gradient-accent: radial-gradient(var(--ray-color-accent) 0%, transparent 70%);
+
+  // New custom gradients
+  --ray-gradient-blue: radial-gradient(color-mix(in srgb, #0077FF, transparent 30%) 0%, transparent 70%); // Bright Blue
+  --ray-gradient-purple: radial-gradient(color-mix(in srgb, #8A2BE2, transparent 30%) 0%, transparent 70%); // Bright Purple
+
+  // New custom colors for borders
+  --ray-color-blue: #0077FF;
+  --ray-color-purple: #8A2BE2;
+
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-out;
+  pointer-events: none;
+  z-index: 0;
+  //   background-color: transparent;
+
+  :global(html[data-theme='dark']) & {
+    mix-blend-mode: screen;
+  }
+
+  :global(html[data-theme='light']) & {
+    mix-blend-mode: multiply;
+  }
+}
+
+.lightRay {
+  position: absolute;
+  border-radius: 100%;
+  background: transparent; // Ensure background is transparent
+
+  :global(html[data-theme='dark']) & {
+    mix-blend-mode: screen;
+  }
+
+  :global(html[data-theme='light']) & {
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+  }
+}
+
+.ray1 {
+  width: 1000px; // Adjust size
+  height: 1000px; // Adjust size (make it a circle)
+  border: 80px solid var(--ray-color-blue); // Thick blue border
+  top: -300px; // Adjust position
+  left: -150px; // Adjust position
+  filter: blur(100px); // Increase blur
+  opacity: 0.6; // Adjust opacity
+  animation: float1 8s infinite ease-in-out; // Faster animation
+  // Remove background and old transform if any remains implicitly
+  background: transparent;
+  transform: rotate(0deg); // Reset rotation or adjust as needed
+}
+
+.ray2 {
+  width: 900px; // Adjust size
+  height: 900px; // Adjust size (make it a circle)
+  border: 70px solid var(--ray-color-purple); // Thick purple border
+  top: -250px; // Adjust position for intersection
+  left: 300px; // Adjust position for intersection
+  filter: blur(90px); // Increase blur
+  opacity: 0.65; // Adjust opacity
+  animation: float2 10s infinite ease-in-out; // Faster animation (slightly different speed)
+  // Remove background and old transform if any remains implicitly
+  background: transparent;
+  transform: rotate(0deg); // Reset rotation or adjust as needed
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    // Move more significantly, add slight rotation/scale
+    transform: translate(80px, -60px) scale(1.08) rotate(15deg);
+  }
+}
+
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    // Move more significantly in a different direction, add slight rotation/scale
+    transform: translate(-70px, 90px) scale(0.92) rotate(-10deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
